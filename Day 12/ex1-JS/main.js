@@ -26,3 +26,6 @@ c1.log();
 
 var c2 = new Calculator(32,12);
 c2.log();
+
+var c3= new Calculator(21,3);
+setTimeout(function(){c3.log();},2000);
