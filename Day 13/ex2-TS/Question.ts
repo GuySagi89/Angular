@@ -1,7 +1,5 @@
-export class Question{
-    constructor(
-        caption: string,
-        answers: string[],
-        correctIndex: number
-    ){}
+export interface Question{
+    caption: string,
+    answers: string[],
+    correctIndex: number
 }
