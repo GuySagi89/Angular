@@ -2,34 +2,34 @@ import {Exam} from "./exam";
 
 let exam =new Exam();
 exam.addQuestion({
-    caption:"bla bla bla",
-    answers:['a','b','c','d'],
+    caption:"Who is the king of the animals in Africa?",
+    answers:['Marimba','Help, I cant swimba','Earthworm Jimba'],
+    correctIndex:0
+});
+
+exam.addQuestion({
+    caption:"If Dan was stuck in Mexico City, how many days would it take before he would eat?",
+    answers:['Dan-Food=Time','Mexican food is evil','Mexican food is good; Dan is evil'],
     correctIndex:1
 });
 
 exam.addQuestion({
-    caption:"bla bli bla",
-    answers:['a','b','c','d'],
-    correctIndex:3
-});
-
-exam.addQuestion({
-    caption:"bla blo bla",
-    answers:['a','b','c','d'],
+    caption:"When is Jim's birthday?",
+    answers:['The day he was born','June 9, 1994','Today if you have a present'],
     correctIndex:2
 });
 
 exam.addQuestion({
-    caption:"bla ble bla",
-    answers:['a','b','c','d'],
-    correctIndex:3
+    caption:"If cigarettes cause cancer, what causes Capricorn?",
+    answers:['Poor-fitting shoes in southern France','Dental floss','One and one half pounds of butter'],
+    correctIndex:2
 });
 
 exam.print();
 
-let ans1 = [0, 1, 2, 3];    // 50%
-let ans2 = [3, 2, 1, 0];    // 0%
-let ans3 = [1, 3, 2, 3, 4, 4, 4] // 100% and not crash
+let ans1 = [0, 1, 2, 2];    
+let ans2 = [2, 2, 1, 0];    
+let ans3 = [1, 2, 2, 2, 4, 4, 4]
 
 console.log(ans1);
 console.log(exam.grade(ans1));
