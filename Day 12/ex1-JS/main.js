@@ -24,5 +24,7 @@ Calculator.prototype.log=function(){
 var c1 = new Calculator(5,10);
 c1.log();
 
-var c2 = new Calculator(32,12);
-c2.log();
+function alertFunc() {
+   c2.log();
+  }
+setTimeout(alertFunc,2000);
