@@ -4,11 +4,4 @@ export class Question{
         answers: string[],
         correctIndex: number
     ){}
-
-
-        add():number{
-            let a=5;
-            return a;
-        }
-
 }
