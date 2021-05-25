@@ -1,0 +1,15 @@
+<div>A:
+    <input #input1 (input)="setNumber1(input1.value)" type="number" >
+</div>
+
+<div>B:
+    <input #input2 (input)="setNumber2(input2.value)" type="number">
+</div>
+
+<div>
+    <button (click)="setCalcResults()">Go!</button>
+</div>
+
+<div>{{this.n1}} + {{this.n2}} = {{this.addResult}}</div>
+<div>{{this.n1}} - {{this.n2}} = {{this.subResult}}</div>
+<div>{{this.n1}} * {{this.n2}} = {{this.multResult}}</div>
