@@ -1,0 +1,21 @@
+<div>
+
+  <div>
+    <h2>{{searchTitle}}</h2>
+    <input type="search" #txtBox (input)="searchWord = txtBox.value">
+    <button (click)="search()" [disabled]="searchWord.length === 0">
+      Search
+    </button>
+    <span [hidden]="!isBusy">Loading...</span>
+  </div>
+
+  <div>
+    <h3>Results:</h3>
+    <app-result [selectedItem]="selectedItemMyComponent" [list]="results"
+      (itemSelected)="setSelectedFromAppResult($event)"></app-result>
+  </div>
+
+
+  <h2 *ngIf="selectedItemMyComponent">Selected item: {{selectedItemMyComponent}}</h2>
+
+</div>
