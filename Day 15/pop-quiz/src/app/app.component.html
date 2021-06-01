@@ -22,11 +22,14 @@
   *ngIf="isTestDone"
   [score]="score"
   [nOfQuestions]="questions.length"
+  (replay)="chosenReplay($event)"
   >
   </app-quiz-over>
 
 </div>
 
 <div class="summary-area">
-  <app-summary></app-summary>
+  <app-summary
+  [summaryQuestions]="questions"
+  ></app-summary>
 </div>

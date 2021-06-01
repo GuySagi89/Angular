@@ -1,0 +1,12 @@
+li{
+  list-style: none;
+  margin: 4px;
+}
+
+.incorrect{
+  border:2px solid rgb(255, 0, 0);
+}
+
+.correct{
+  border:2px solid rgb(0, 255, 0);
+}

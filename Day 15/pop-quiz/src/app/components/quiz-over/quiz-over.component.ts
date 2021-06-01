@@ -9,11 +9,11 @@ export class QuizOverComponent implements OnInit {
   constructor() {}
   @Input() score:number=0;
   @Input() nOfQuestions:number=0;
-  @Output() replay=new EventEmitter<string>();
+  @Output() replay=new EventEmitter<boolean>();
 
   ngOnInit(): void {}
 
   setReplayAnswer(){
-    this.replay.emit('abc');
+    this.replay.emit(true);
   }
 }
