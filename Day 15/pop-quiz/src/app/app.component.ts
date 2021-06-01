@@ -53,7 +53,7 @@ export class AppComponent {
     }
   }
 
-  chosenReplay(isReplay:boolean){
+  chosenReplay(isReplay:string){
     if(isReplay){
       this.isTestDone=false;
     }

@@ -18,10 +18,10 @@
   </app-question-presenter>
 
   <app-quiz-over
+
   *ngIf="isTestDone"
   [score]="score"
   [nOfQuestions]="questions.length"
-  (setReplayAnswer)="isTestDone=true"
   >
   </app-quiz-over>
 
