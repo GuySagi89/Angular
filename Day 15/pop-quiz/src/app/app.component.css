@@ -4,6 +4,17 @@
   grid-template-rows: auto 1fr;
 }
 
+ button{
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(175, 175, 175);
+}
+
 div{
   border: 1px solid gray;
   margin:1px;
@@ -23,6 +34,9 @@ h1{
 }
 
 .main-area{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(250, 255, 226);
 }
 

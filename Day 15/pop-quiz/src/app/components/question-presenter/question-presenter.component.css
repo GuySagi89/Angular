@@ -1,0 +1,17 @@
+li{
+  list-style: none;
+  border:1px solid lightgray;
+  border-radius: 6px;
+  padding: 2px;
+  margin: 2px;
+  cursor: pointer;
+  background-color: lavender;
+}
+
+ li:hover{
+  background-color: rgb(165, 165, 212);
+}
+
+.chosen{
+  background-color: rgb(116, 116, 175);
+}

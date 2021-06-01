@@ -2,12 +2,29 @@
   <h1>Pop Quiz!</h1>
 </div>
 
-<div *ngIf="!isTestDone" class="main-area">
-  <app-question-presenter></app-question-presenter>
-</div>
+<div class="main-area">
 
-<div *ngIf="isTestDone" class="main-area">
-  <app-quiz-over></app-quiz-over>
+  <button *ngIf="!hasTestStarted"
+  (click)='hasTestStarted=true'>
+  Start Test!</button>
+
+  <app-question-presenter
+
+   *ngIf="!isTestDone && hasTestStarted"
+    [currentQuestion]="questions[currentQuestionIndex].caption"
+    [answers]="questions[currentQuestionIndex].answers"
+    (chosenAnswer) ="onChoice($event)"
+   >
+  </app-question-presenter>
+
+  <app-quiz-over
+  *ngIf="isTestDone"
+  [score]="score"
+  [nOfQuestions]="questions.length"
+  (setReplayAnswer)="isTestDone=true"
+  >
+  </app-quiz-over>
+
 </div>
 
 <div class="summary-area">
