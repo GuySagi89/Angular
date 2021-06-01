@@ -9,7 +9,7 @@ export class AppComponent {
   //data
   title = 'super-notepad';
   colors: string[] = ['red', 'green', 'blue', 'black', 'navy', 'silver'];
-  sizes: string[] = ['18px', '24px', '32px', '36px', '40px','80px'];
+  sizes: string[] = ['18px', '24px', '32px', '36px', '40px', '80px'];
   fonts: string[] = [
     'Arial',
     'Verdana',
