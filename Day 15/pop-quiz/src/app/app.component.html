@@ -1,0 +1,15 @@
+<div class="title-area">
+  <h1>Pop Quiz!</h1>
+</div>
+
+<div *ngIf="!isTestDone" class="main-area">
+  <app-question-presenter></app-question-presenter>
+</div>
+
+<div *ngIf="isTestDone" class="main-area">
+  <app-quiz-over></app-quiz-over>
+</div>
+
+<div class="summary-area">
+  <app-summary></app-summary>
+</div>

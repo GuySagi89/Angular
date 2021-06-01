@@ -1,0 +1,31 @@
+:host{
+  display: grid;
+  grid-template-columns:7fr 3fr ;
+  grid-template-rows: auto 1fr;
+}
+
+div{
+  border: 1px solid gray;
+  margin:1px;
+  border-radius: 6px;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:3px;
+}
+
+.title-area{
+  grid-column: 1/-1;
+  background-color: rgb(255, 213, 151);
+}
+
+.main-area{
+  background-color: rgb(250, 255, 226);
+}
+
+.summary-area{
+  background-color: rgb(255, 215, 238);
+}
