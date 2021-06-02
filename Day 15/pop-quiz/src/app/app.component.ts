@@ -62,7 +62,6 @@ export class AppComponent {
   ];
 
   onChoice(answer: number) {
-    console.log(answer);
     if (answer === this.questions[this.currentQuestionIndex].correctAnswer) {
       this.questions[this.currentQuestionIndex].userAnswer = answer;
       this.score++;
