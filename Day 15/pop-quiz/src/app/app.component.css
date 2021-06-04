@@ -30,6 +30,7 @@ h1{
 
 .title-area{
   grid-column: 1/-1;
+  grid-row:1;
   background-color: rgb(255, 213, 151);
 }
 
