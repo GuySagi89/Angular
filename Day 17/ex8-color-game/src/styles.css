@@ -4,14 +4,12 @@ html, body{
   height: 100%;
   margin: 0px;
 }
-/*
-body{
-  display: grid;
-}
 
-/* div{
+
+div{
   display: grid;
-} */ */
+
+}
 
 *{
   box-sizing: border-box;

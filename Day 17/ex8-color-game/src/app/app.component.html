@@ -1,10 +1,21 @@
 <div class="colors">
-  <app-color-input title="Red"></app-color-input>
-  <app-color-input title="Green"></app-color-input>
-  <app-color-input title="Blue"></app-color-input>
+  <app-color-input></app-color-input>
+</div>
+
+<div class="user-guess">
+  Your Guess:
+  <app-color-presenter [color]="myColor$ | async"></app-color-presenter>
+</div>
+
+<div class="generated-color">
+  Computer Color:
+  <app-color-presenter [color]="compColor$ | async"></app-color-presenter>
 </div>
 
 <div>
-<button>Random Color</button>
+<button (click)="randomize()">Get Random Color</button>
+</div>
 
+<div>
+<h1 *ngIf="success$ | async">A winner is you!</h1>
 </div>
