@@ -8,15 +8,13 @@ import { GameService } from 'src/app/services/game.service';
   templateUrl: './color-input.component.html',
   styleUrls: ['./color-input.component.css'],
 })
-export class ColorInputComponent implements OnInit {
+export class ColorInputComponent {
   constructor(private gameService: GameService) {}
-
-  ngOnInit(): void {}
 
   private normlize(num: string): number {
     let val = Math.round(Number(num));
     return Math.min(Math.max(0, val), 255);
-}
+  }
 
   setR(value: string) {
     this.gameService.setRed(this.normlize(value));
@@ -25,9 +23,8 @@ export class ColorInputComponent implements OnInit {
   setG(value: string) {
     this.gameService.setGreen(this.normlize(value));
   }
+
   setB(value: string) {
     this.gameService.setBlue(this.normlize(value));
   }
-
-
 }

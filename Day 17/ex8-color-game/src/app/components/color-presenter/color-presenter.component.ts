@@ -8,17 +8,9 @@ import { GameService } from 'src/app/services/game.service';
   templateUrl: './color-presenter.component.html',
   styleUrls: ['./color-presenter.component.css'],
 })
-export class ColorPresenterComponent implements OnChanges {
+export class ColorPresenterComponent  {
   constructor(private gameService: GameService) {}
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.color);
-  }
+
   @Input() color: string | null = '';
-
-  ngOnInit(): void {
-
-  }
-
-
 
 }

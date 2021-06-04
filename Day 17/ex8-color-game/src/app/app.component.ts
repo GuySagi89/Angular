@@ -32,7 +32,6 @@ export class AppComponent implements OnInit {
         this.success$ = combineLatest([this.myColor$, this.compColor$]).pipe(
           map((tpl) => tpl[0] === tpl[1])
         );
-
   }
 
   generateColor() {
