@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'basics';
+ isParagraphDisplayed=false;
+  clickLog:string[] =[];
+
+  onClick(){
+    var d=new Date(Date.now());
+    this.isParagraphDisplayed=!this.isParagraphDisplayed;
+    this.clickLog.push(d.getTime().toString());
+  }
 }
