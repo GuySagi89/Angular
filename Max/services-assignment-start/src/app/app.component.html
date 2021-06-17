@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div class="active-counter">
+      </div>
+      <app-active-users [users]="activeUsers">
+      </app-active-users>
+      Passed to active: {{activePassCounter}}
+
+      <div class="inactive-counter">
+      </div>
+      <app-inactive-users [users]="inactiveUsers">
+      </app-inactive-users>
+      Passed to inactive: {{inactivePassCounter}}
+    </div>
+
+  </div>
+</div>
