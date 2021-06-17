@@ -1,0 +1,13 @@
+
+.recipe-item{
+  cursor: pointer;
+}
+
+.recipe-item:hover{
+    background-color: aliceblue;
+
+}
+
+.selected-recipe{
+  background-color: rgb(181, 200, 218);
+}

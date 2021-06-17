@@ -1,0 +1,27 @@
+<div *ngIf="recipe" class="container">
+  <div class="title">
+    {{recipe.name}}
+  </div>
+
+  <div class="recipe-image">
+    <img [src]="recipe.imagePath" alt="{{recipe.name}}">
+  </div>
+
+  <button class="edit" mat-ment-item [matMenuTriggerFor]="menu">Edit Recipe</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>To Shopping List</button>
+    <button mat-menu-item>Edit Recipe</button>
+    <button mat-menu-item>Delete Recipe</button>
+  </mat-menu>
+
+
+  <div class="description">
+    {{recipe.description}}
+  </div>
+
+  <div class="ingredients">
+    Ingredients
+  </div>
+</div>
+
+

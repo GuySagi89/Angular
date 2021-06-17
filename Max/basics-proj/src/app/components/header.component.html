@@ -1,0 +1,23 @@
+<div class="title-text">
+  Recipe Book
+</div>
+
+<div class="recipes-text"
+(click)="onSelect('recipes')"
+>
+  Recipes
+</div>
+
+<div class="shopping-list-text"
+(click)="onSelect('shopping')"
+>
+  Shopping List
+</div>
+
+
+
+<button  class="manage-text" [matMenuTriggerFor]="menu">Manage</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Save Data</button>
+  <button mat-menu-item>Fetch Data</button>
+</mat-menu>

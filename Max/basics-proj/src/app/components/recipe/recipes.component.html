@@ -1,0 +1,14 @@
+<div class="recipe-list">
+
+  <app-recipe-list
+  [recipe]="currentSelectedRecipe"
+  (selectedRecipe)="onRecipePick($event)"
+  ></app-recipe-list>
+</div>
+
+
+<div class="recipe-detalis">
+  <app-recipe-detail
+  [recipe]="currentSelectedRecipe"
+  ></app-recipe-detail>
+</div>
