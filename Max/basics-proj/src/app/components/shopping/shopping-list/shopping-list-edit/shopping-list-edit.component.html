@@ -11,7 +11,18 @@
 </div>
 
 <div class="buttons-section">
-  <button class="add-button">Add</button>
-  <button class="delete-button">Delete</button>
-  <button class="clear-button">Clear</button>
+  <button
+  (click)="onAdd(ingName.value,ingAmount.value)"
+  class="add-button">
+  Add</button>
+
+  <button
+  class="delete-button"
+  (click)="onDelete">
+  Delete</button>
+
+  <button
+  class="clear-button"
+  (click)="onClear">
+  Clear</button>
 </div>

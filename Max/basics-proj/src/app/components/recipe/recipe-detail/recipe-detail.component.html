@@ -9,7 +9,9 @@
 
   <button class="edit" mat-ment-item [matMenuTriggerFor]="menu">Edit Recipe</button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>To Shopping List</button>
+    <button
+    (click)="moveToShoppingList()"
+    mat-menu-item>Add To Shopping List</button>
     <button mat-menu-item>Edit Recipe</button>
     <button mat-menu-item>Delete Recipe</button>
   </mat-menu>
@@ -20,8 +22,11 @@
   </div>
 
   <div class="ingredients">
-    Ingredients
+    <ul>
+      Ingredients:
+      <li *ngFor="let ingredient of recipe.ingredients">
+        {{ingredient.name}} : ({{ingredient.amount}})
+      </li>
+    </ul>
   </div>
 </div>
-
-

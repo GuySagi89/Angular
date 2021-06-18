@@ -1,5 +1,6 @@
 <ul *ngFor="let item of shoppingList">
-  <li>
+  <li (click)="onSelectItem(item)"
+  [class.selected-ingredient]="item===selectedIngredient">
     {{item.name}} ({{item.amount}})
   </li>
 

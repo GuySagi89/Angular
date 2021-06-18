@@ -19,3 +19,6 @@ li:hover{
   background-color: lightgrey;
 }
 
+.selected-ingredient{
+  background-color: rgb(187, 211, 231);
+}

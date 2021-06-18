@@ -11,11 +11,11 @@ import { HeaderComponent } from './components/header.component';
 import { RecipesComponent } from './components/recipe/recipes.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import{MatSliderModule,} from '@angular/material/slider';
-import {MatSelectModule} from '@angular/material/select';
-import{MatInputModule } from '@angular/material/input'
-import {MatMenuModule} from '@angular/material/menu';
-
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { ShoppingService } from './services/shopping.service';
 
 @NgModule({
   declarations: [
@@ -28,8 +28,16 @@ import {MatMenuModule} from '@angular/material/menu';
     HeaderComponent,
     RecipesComponent,
   ],
-  imports: [BrowserModule, NgbModule, BrowserAnimationsModule,MatSliderModule,MatSelectModule,MatInputModule,MatMenuModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatSelectModule,
+    MatInputModule,
+    MatMenuModule,
+  ],
   bootstrap: [AppComponent],
+  providers: [ShoppingService],
 })
 export class AppModule {}
