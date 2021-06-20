@@ -1,13 +1,5 @@
 <div class="header-section">
-  <app-header (sectionSelected)="changeSection($event)"></app-header>
+  <app-header></app-header>
 </div>
 
-<div *ngIf="currentSection=='recipes'" class="recipes-section">
-  <app-recipes></app-recipes>
-</div>
-
-
-<div *ngIf="currentSection=='shopping'" class="shopping-list-section">
-  <app-shopping-list-edit></app-shopping-list-edit>
-  <app-shopping-list></app-shopping-list>
-</div>
+<router-outlet></router-outlet>

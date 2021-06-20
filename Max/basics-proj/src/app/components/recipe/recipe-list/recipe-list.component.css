@@ -8,6 +8,6 @@
 
 }
 
-.selected-recipe{
-  background-color: rgb(181, 200, 218);
+.active{
+  background-color: rgb(198, 212, 223);
 }

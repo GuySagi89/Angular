@@ -1,20 +1,18 @@
-<div class="title-text">
+<div routerLink='' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="title-text">
   Recipe Book
 </div>
 
-<div class="recipes-text"
-(click)="onSelect('recipes')">
+<div routerLink='/recipes' routerLinkActive="active" class="recipes-text">
   Recipes
 </div>
 
-<div class="shopping-list-text"
-(click)="onSelect('shopping')">
+<div routerLink='/shopping' routerLinkActive="active" class="shopping-list-text">
   Shopping List
 </div>
 
 
 
-<button  class="manage-text" [matMenuTriggerFor]="menu">Manage</button>
+<button class="manage-text" [matMenuTriggerFor]="menu">Manage</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item>Save Data</button>
   <button mat-menu-item>Fetch Data</button>

@@ -10,12 +10,14 @@
   <button class="edit" mat-ment-item [matMenuTriggerFor]="menu">Edit Recipe</button>
   <mat-menu #menu="matMenu">
     <button
-    (click)="moveToShoppingList()"
-    mat-menu-item>Add To Shopping List</button>
-    <button mat-menu-item>Edit Recipe</button>
+      (click)="moveToShoppingList()"
+      mat-menu-item>Add To Shopping List
+    </button>
+    <button
+      (click)="moveToEditRecipe()"
+      mat-menu-item>Edit Recipe</button>
     <button mat-menu-item>Delete Recipe</button>
   </mat-menu>
-
 
   <div class="description">
     {{recipe.description}}

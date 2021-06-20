@@ -16,6 +16,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { ShoppingService } from './services/shopping.service';
+import { AppRoutingModule } from './Modules/app-routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { RecipeEditComponent } from './components/recipe/recipe-edit/recipe-edit.component';
+import { RecipeStartComponent } from './components/recipe/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,9 @@ import { ShoppingService } from './services/shopping.service';
     RecipeDetailComponent,
     HeaderComponent,
     RecipesComponent,
+    HomeComponent,
+    RecipeEditComponent,
+    RecipeStartComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,8 +43,8 @@ import { ShoppingService } from './services/shopping.service';
     MatSelectModule,
     MatInputModule,
     MatMenuModule,
+    AppRoutingModule,
   ],
   bootstrap: [AppComponent],
-  providers: [ShoppingService],
 })
 export class AppModule {}

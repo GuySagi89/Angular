@@ -19,12 +19,16 @@
   padding-right: 20px;
 }
 
-.recipes-text,.shopping-list-text,.manage-text{
+.recipes-text,.shopping-list-text,.manage-text,.title-text{
   cursor: pointer;
 }
 
-.recipes-text:hover,.shopping-list-text:hover,.manage-text:hover{
+.recipes-text:hover,.shopping-list-text:hover,.manage-text:hover,.title-text:hover{
   color: rgb(95, 95, 95);
+}
+
+.active{
+  color: rgb(13, 35, 100);
 }
 
 *{
@@ -35,3 +39,4 @@
   padding-bottom: 20px;
   padding-left: 20px;
 }
+

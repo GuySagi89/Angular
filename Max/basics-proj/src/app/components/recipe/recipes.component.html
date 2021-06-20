@@ -1,13 +1,11 @@
-<div class="recipe-list">
-
-  <app-recipe-list
-  [recipe]="currentSelectedRecipe"
-  ></app-recipe-list>
+<div class="new-recipe-btm"><button (click)="onNewRecipe()">Add New</button>
 </div>
 
+<div class="recipe-list">
 
-<div class="recipe-detalis">
-  <app-recipe-detail
-  [recipe]="currentSelectedRecipe"
-  ></app-recipe-detail>
+  <app-recipe-list></app-recipe-list>
+</div>
+
+<div>
+  <router-outlet></router-outlet>
 </div>

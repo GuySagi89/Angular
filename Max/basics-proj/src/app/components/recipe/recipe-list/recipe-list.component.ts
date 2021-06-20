@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Recipe } from 'src/app/models/recipe.model';
 import { RecipeService } from 'src/app/services/recipe.service';
 
@@ -8,11 +9,13 @@ import { RecipeService } from 'src/app/services/recipe.service';
   styleUrls: ['./recipe-list.component.css'],
 })
 export class RecipeListComponent implements OnInit {
-  @Input('recipe') currentRecipe!: Recipe;
-
   recipes: Recipe[] = [];
 
-  constructor(private recipesService: RecipeService) {}
+  constructor(
+    private recipesService: RecipeService,
+    private router: Router,
+    private activateRoute: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.recipes = this.recipesService.getRecipes();

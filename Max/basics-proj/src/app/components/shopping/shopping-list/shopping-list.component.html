@@ -1,3 +1,6 @@
+<app-shopping-list-edit></app-shopping-list-edit>
+
+
 <ul *ngFor="let item of shoppingList">
   <li (click)="onSelectItem(item)"
   [class.selected-ingredient]="item===selectedIngredient">

@@ -1,10 +1,9 @@
 <div *ngFor="let recipe of recipes; let i=index">
   <app-recipe-item
-  class="recipe-item"
-  [recipe]="recipe"
-  (click)="onRecipePick(recipe)"
-  [class.selected-recipe]="recipe===currentRecipe"
-  >
-
+    class="recipe-item"
+    [recipe]="recipe"
+    [routerLink]="[i]"
+    (click)="onRecipePick(recipe)"
+    routerLinkActive="active">
   </app-recipe-item>
 </div>
