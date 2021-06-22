@@ -1,0 +1,31 @@
+:host{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  font-size: 15px;
+  width: fit-content;
+}
+button{
+  width: fit-content;
+ border-radius: 4px;
+ font-size: 20px;
+ font-weight: 400;
+ background-color: rgb(209, 224, 236);
+}
+
+button:hover{
+  background-color: rgb(135, 160, 180);
+}
+
+button:active{
+  background-color: rgb(204, 127, 127);
+
+}
+
+*{
+  padding: 10px;
+  margin-left: 5px;
+  margin-top: 10px;
+}

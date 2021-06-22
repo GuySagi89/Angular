@@ -7,14 +7,3 @@
   grid-column: 1;
 }
 
-button{
-  font-weight: 500;
-  width: fit-content;
-  height: fit-content;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 3px;
-  border: 1px solid rgb(182, 167, 167);
-  background-color: rgb(81, 129, 219);
-  color: white;
-}

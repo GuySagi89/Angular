@@ -13,8 +13,9 @@ export class RecipeListComponent implements OnInit {
 
   constructor(
     private recipesService: RecipeService,
-    private router: Router,
-    private activateRoute: ActivatedRoute
+    private route: Router,
+    private activeRoute: ActivatedRoute
+
   ) {}
 
   ngOnInit() {
@@ -22,6 +23,9 @@ export class RecipeListComponent implements OnInit {
   }
 
   onRecipePick(recipe: Recipe) {
-    this.recipesService.selectedRecipe.emit(recipe);
+  }
+
+  onNewRecipe() {
+    this.route.navigate(['new'], { relativeTo: this.activeRoute });
   }
 }

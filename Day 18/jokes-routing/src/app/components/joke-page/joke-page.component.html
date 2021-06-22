@@ -1,0 +1,19 @@
+<div *ngIf="(joke$ | async) as joke" class="joke" class="joke-container">
+
+  <div class="joke">
+    {{joke.setup}}
+  </div>
+
+  <div class="punchline">
+    {{joke.punchline}}
+
+  </div>
+</div>
+
+<div class="navigate">
+  <button
+  [disabled]="!(hasPrev$|async)"
+  (click)="onPrev()">Prev</button>
+  <button (click)="onNewSearch()">New Search</button>
+  <button (click)="onNext()">Next</button>
+</div>

@@ -1,5 +1,6 @@
 import { EventEmitter } from '@angular/core';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Ingredient } from '../models/ingredient.model';
 import { Recipe } from '../models/recipe.model';
 import { ShoppingService } from './shopping.service';
@@ -9,9 +10,6 @@ import { ShoppingService } from './shopping.service';
 })
 export class RecipeService {
   constructor(private shopService: ShoppingService) {}
-
-  selectedRecipe = new EventEmitter<Recipe>();
-
   recipes: Recipe[] = [
     {
       name: 'Meatballs',
@@ -55,7 +53,6 @@ export class RecipeService {
   }
 
   getRecipe(id: number) {
-
     return this.recipes[id];
   }
 }

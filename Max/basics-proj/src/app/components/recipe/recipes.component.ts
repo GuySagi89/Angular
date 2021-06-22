@@ -19,12 +19,8 @@ export class RecipesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.recipesService.selectedRecipe.subscribe(
-      (recipe: Recipe) => (this.currentSelectedRecipe = recipe)
-    );
+
   }
 
-  onNewRecipe() {
-    this.route.navigate(['new'], { relativeTo: this.activeRoute });
-  }
+
 }
