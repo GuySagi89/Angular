@@ -14,7 +14,6 @@ export class JokePageComponent implements OnInit {
   index!: number;
   keyword!: string;
   jokes!: Joke[];
-  prev!: Subject<boolean>;
 
   index$!: Observable<[keyword: string, index: number]>;
   keyword$!: Observable<string>;

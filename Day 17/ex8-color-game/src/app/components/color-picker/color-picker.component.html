@@ -1,0 +1,15 @@
+<div class="red-input">
+  <h3>R</h3>
+  <input #redInput (input)="onValueChangeR(redInput.value)" type="number" placeholder="255" min="0" max="255">
+</div>
+
+<div class="green-input">
+  <h3>G</h3>
+  <input (input)="onValueChangeG(greenInput.value)" #greenInput type="number" placeholder="255" min="0" max="255">
+</div>
+
+<div class="blue-input">
+  <h3>B</h3>
+  <input (input)="onValueChangeB(blueInput.value)" #blueInput type="number" placeholder="255" min="0" max="255">
+</div>
+

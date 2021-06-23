@@ -1,21 +1,17 @@
-<div class="colors">
-  <app-color-input></app-color-input>
+<div class="game-container">
+  <app-color-picker></app-color-picker>
+
+  <app-color-presenter
+  [color]="userColor$|async"
+  title='Your guess'></app-color-presenter>
+
+  <app-color-presenter
+  [color]="generatedColor$|async"
+  title='Computer Guess'></app-color-presenter>
 </div>
 
-<div class="user-guess">
-  Your Guess:
-  <app-color-presenter [color]="myColor$ | async"></app-color-presenter>
-</div>
+<button
+(click)="randomizeColor()"
+>Generate new color!</button>
 
-<div class="generated-color">
-  Computer Color:
-  <app-color-presenter [color]="compColor$ | async"></app-color-presenter>
-</div>
-
-<div>
-<button (click)="randomize()">Get Random Color</button>
-</div>
-
-<div>
-<h1 *ngIf="success$ | async">A winner is you!</h1>
-</div>
+<h1 *ngIf="gameStatus$|async">A winner is you!</h1>

@@ -1,0 +1,26 @@
+
+<button [disabled]="!(hasPrev$ |async)" (click)="decrease()">
+  -
+</button>
+
+
+<div class="counter">
+  {{counter$|async}}
+</div>
+
+  <button [disabled]="!(hasNext$ |async)" (click)="increase()">
+    +
+  </button>
+
+
+  {{this.$combine|async}}
+
+  <input
+  type="text"
+  #dodo>
+
+  <button
+  (click)="getText(dodo.value)"
+  >input me</button>
+
+  {{reverser$|async}}

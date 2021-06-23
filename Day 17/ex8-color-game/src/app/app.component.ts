@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { GameService } from './services/game.service';
-import { Rgb } from './models/types';
 import { combineLatest, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-
+import { map } from 'rxjs/internal/operators/map';
+import { ColorManagerService } from './services/color-manager.service';
 
 @Component({
   selector: 'app-root',
@@ -12,37 +9,30 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  myColor$!: Observable<string>;
-  compColor$!: Observable<string>;
+  generatedColor$ = new Observable<string>();
+  userColor$ = new Observable<string>();
+  gameStatus$!: Observable<boolean>;
 
-  success$!: Observable<boolean>;
-  constructor(private game: GameService) {}
+  constructor(private colorService: ColorManagerService) {}
 
   ngOnInit(): void {
-    let r$ = this.game.getRed();
-    let g$ = this.game.getGreen();
-    let b$ = this.game.getBlue();
+    this.colorService.generateColor();
 
-        this.myColor$ = combineLatest([r$, g$, b$]).pipe(
-            map(tpl => this.rgbToCss(tpl)));
+    this.generatedColor$ = this.colorService
+      .getRandColor()
+      .pipe(map((v) => this.colorService.rgbToColorStr(v)));
 
-        this.compColor$ = this.game.getComputerColor().pipe(
-            map(rgb => this.rgbToCss(rgb)));
+    this.userColor$ = this.colorService
+      .getUserColor()
+      .pipe(map((v) => this.colorService.rgbToColorStr(v)));
 
-        this.success$ = combineLatest([this.myColor$, this.compColor$]).pipe(
-          map((tpl) => tpl[0] === tpl[1])
-        );
+    this.gameStatus$ = combineLatest([
+      this.generatedColor$,
+      this.userColor$,
+    ]).pipe(map((n) => n[0] === n[1]));
   }
 
-  generateColor() {
-    this.game.getComputerColor();
-  }
-
-   rgbToCss(rgb: Rgb) {
-    return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
-  }
-
-  randomize() {
-    this.game.randomizeColor();
+  randomizeColor() {
+    this.colorService.generateColor();
   }
 }
