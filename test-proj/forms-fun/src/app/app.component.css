@@ -1,0 +1,35 @@
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  width: 300px;
+  margin-left: 20px;
+}
+
+.emails,.countries{
+  display: flex;
+  flex-direction: column;
+}
+
+div{
+      margin-top: 3px;
+
+
+  display: grid;
+  grid-template-columns: 250px 100px;
+}
+
+button{
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+input.ng-invalid.ng-dirty, div.ng-invalid.ng-dirty,select.ng-invalid.ng-touched{
+  border:1px solid red;
+}
+
