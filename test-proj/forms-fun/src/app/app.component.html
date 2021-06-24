@@ -5,11 +5,11 @@
 
   <div>
     <label>ID:</label>
-    <input formControlName="id">
+    <input type="number" formControlName="id">
   </div>
 
-
   <div class="emails" formGroupName="emails">
+
     <div>
       E-mail:<input formControlName="email">
     </div>
@@ -21,23 +21,24 @@
   </div>
 
   <div class="countries" formGroupName="countries">
-  <div>
-    Origin Country:<select formControlName="originCountry">
-      <option> Israel</option>
-      <option> USA</option>
-      <option> China</option>
-    </select>
+
+    <div>
+      Origin Country:<select formControlName="originCountry">
+        <option> Israel</option>
+        <option> USA</option>
+        <option> China</option>
+      </select>
+    </div>
+
+    <div>
+      Destination Country:<select formControlName="destinationCountry">
+        <option> Israel</option>
+        <option> USA</option>
+        <option> China</option>
+      </select>
+    </div>
 
   </div>
-
-  <div>
-    Destination Country:<select formControlName="destinationCountry">
-      <option> Israel</option>
-      <option> USA</option>
-      <option> China</option>
-    </select>
-  </div>
-</div>
 
   <button [disabled]="personForm.invalid">Save</button>
 </form>
