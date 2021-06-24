@@ -1,6 +1,7 @@
 # FormsFun
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+It is an exercise in reactive form building and custom validators.
 
 ## Development server
 
